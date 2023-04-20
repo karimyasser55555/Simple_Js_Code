@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ---------------------- Problem 1 ----------------------- -->
+    <h1>Welcome</h1>
+    <br>
+    <script>
+        var Query_String= decodeURIComponent(location.search)
+        var Splited_Array = Query_String.split('&')
+        var Arr=[]
+        for(var i = 0 ; i<Splited_Array.length;i++)
+        {
+            Arr = Splited_Array[i].split('=')
+            if(i==0)
+            {
+            document.write(` Your User Name Is : ${Arr[1]}</br>`)
+            }
+            else
+            {
+            document.write(` Your Password Is : ${Arr[1]}`)    
+            }
+        }
+        
+    </script>
+</body>
+</html>
